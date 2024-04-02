@@ -24,6 +24,8 @@ class Program
         string blueberryImagePath = DownloadImage("https://i.postimg.cc/ncDcD7G1/blueberry.png", saveDirectory);
         string syrupImagePath = DownloadImage("https://i.postimg.cc/bvhj252j/syrup.png", saveDirectory);
         string syrupImagePath2 = DownloadImage("https://i.postimg.cc/V6c1JFHh/syrup2.png", saveDirectory);
+        string syrupImagePath3 = DownloadImage("https://i.postimg.cc/wTPd4btS/syrup3.png", saveDirectory);
+        string syrupImagePath4 = DownloadImage("https://i.postimg.cc/Jn1wHfgB/syrup4.png", saveDirectory);
 
         // load images
         Texture2D waffleTexture = Raylib.LoadTexture(waffleImagePath);
@@ -31,6 +33,8 @@ class Program
         Texture2D blueberryTexture = Raylib.LoadTexture(blueberryImagePath);
         Texture2D syrupTexture = Raylib.LoadTexture(syrupImagePath);
         Texture2D syrupTexture2 = Raylib.LoadTexture(syrupImagePath2);
+        Texture2D syrupTexture3 = Raylib.LoadTexture(syrupImagePath3);
+        Texture2D syrupTexture4 = Raylib.LoadTexture(syrupImagePath4);
 
         float characterSize = 0.15f;
         float boardGameSize = 0.45f;
@@ -79,6 +83,17 @@ class Program
             new Vector2(-190, 150),
         };
 
+        Vector2[] syrupPositions3 = new Vector2[]
+        {
+            new Vector2(-180, -60),
+
+        };
+
+        Vector2[] syrupPositions4 = new Vector2[]
+        {
+            new Vector2(-180, -50),
+        };
+
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
@@ -107,14 +122,26 @@ class Program
                 Raylib.DrawTextureEx(syrupTexture2, position, 0.0f, syrupsize, Color.White);
             }
 
+            foreach (Vector2 position in syrupPositions3)
+            {
+                Raylib.DrawTextureEx(syrupTexture3, position, 0.0f, syrupsize, Color.White);
+            }
+
+            foreach (Vector2 position in syrupPositions4)
+            {
+                Raylib.DrawTextureEx(syrupTexture4, position, 0.0f, syrupsize, Color.White);
+            }
+
             Raylib.EndDrawing();
         }
-
+        
         Raylib.UnloadTexture(waffleTexture);
         Raylib.UnloadTexture(strawberryTexture);
         Raylib.UnloadTexture(blueberryTexture);
         Raylib.UnloadTexture(syrupTexture);
         Raylib.UnloadTexture(syrupTexture2);
+        Raylib.UnloadTexture(syrupTexture3);
+        Raylib.UnloadTexture(syrupTexture4);
 
         Raylib.CloseWindow();
     }
