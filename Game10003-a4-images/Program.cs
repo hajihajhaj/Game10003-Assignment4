@@ -22,14 +22,19 @@ class Program
         string waffleImagePath = DownloadImage("https://i.postimg.cc/x878S3yX/waffle.png", saveDirectory);
         string strawberryImagePath = DownloadImage("https://i.postimg.cc/PJBX7rTZ/strawberry.png", saveDirectory);
         string blueberryImagePath = DownloadImage("https://i.postimg.cc/ncDcD7G1/blueberry.png", saveDirectory);
+        string syrupImagePath = DownloadImage("https://i.postimg.cc/bvhj252j/syrup.png", saveDirectory);
+        string syrupImagePath2 = DownloadImage("https://i.postimg.cc/V6c1JFHh/syrup2.png", saveDirectory);
 
         // load images
         Texture2D waffleTexture = Raylib.LoadTexture(waffleImagePath);
         Texture2D strawberryTexture = Raylib.LoadTexture(strawberryImagePath);
         Texture2D blueberryTexture = Raylib.LoadTexture(blueberryImagePath);
+        Texture2D syrupTexture = Raylib.LoadTexture(syrupImagePath);
+        Texture2D syrupTexture2 = Raylib.LoadTexture(syrupImagePath2);
 
         float characterSize = 0.15f;
         float boardGameSize = 0.45f;
+        float syrupsize = 0.5f;
 
         // position of images
         Vector2 wafflePosition = new Vector2(-135, -5);
@@ -60,6 +65,20 @@ class Program
             new Vector2(340, 380),
         };
 
+        Vector2[] syrupPositions = new Vector2[]
+        {
+            new Vector2(-180, -30),
+            new Vector2(0, -30),
+            new Vector2(-360, -30),
+        };
+
+        Vector2[] syrupPositions2 = new Vector2[]
+        {
+            new Vector2(-190, -30),
+            new Vector2(-190, -210),
+            new Vector2(-190, 150),
+        };
+
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
@@ -78,12 +97,24 @@ class Program
                 Raylib.DrawTextureEx(blueberryTexture, position, 0.0f, characterSize, Color.White);
             }
 
+            foreach (Vector2 position in syrupPositions)
+            {
+                Raylib.DrawTextureEx(syrupTexture, position, 0.0f, syrupsize, Color.White);
+            }
+
+            foreach (Vector2 position in syrupPositions2)
+            {
+                Raylib.DrawTextureEx(syrupTexture2, position, 0.0f, syrupsize, Color.White);
+            }
+
             Raylib.EndDrawing();
         }
 
         Raylib.UnloadTexture(waffleTexture);
         Raylib.UnloadTexture(strawberryTexture);
         Raylib.UnloadTexture(blueberryTexture);
+        Raylib.UnloadTexture(syrupTexture);
+        Raylib.UnloadTexture(syrupTexture2);
 
         Raylib.CloseWindow();
     }
