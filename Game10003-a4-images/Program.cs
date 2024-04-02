@@ -18,12 +18,15 @@ class Program
 
         string saveDirectory = "C:/Users/hajar/downloads/tictactoe";
 
+        // download images from urls 
         string waffleImagePath = DownloadImage("https://i.postimg.cc/x878S3yX/waffle.png", saveDirectory);
 
+        // load images
         Texture2D waffleTexture = Raylib.LoadTexture(waffleImagePath);
 
         float boardGameSize = 0.45f;
 
+        // position of images
         Vector2 wafflePosition = new Vector2(-135, -5);
 
         while (!Raylib.WindowShouldClose())
@@ -31,6 +34,7 @@ class Program
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.RayWhite);
  
+            // draw images
             Raylib.DrawTextureEx(waffleTexture, wafflePosition, 0.0f, boardGameSize, Color.White);
 
             Raylib.EndDrawing();
