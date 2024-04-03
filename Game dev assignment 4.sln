@@ -1,25 +1,152 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34616.47
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game dev assignment 4", "Game dev assignment 4\Game dev assignment 4.csproj", "{CB654B19-66B7-42F9-B5BA-03DCBDD8654B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CB654B19-66B7-42F9-B5BA-03DCBDD8654B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB654B19-66B7-42F9-B5BA-03DCBDD8654B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB654B19-66B7-42F9-B5BA-03DCBDD8654B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB654B19-66B7-42F9-B5BA-03DCBDD8654B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DE585DF0-8A3C-4CA6-A5F9-F9D87C6FC7E5}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace TicTacToe
+{
+    class Program
+    {
+        static char[,] board = new char[3, 3];
+        static bool player1Turn = true;
+        static bool gameOver = false;
+
+        static void Main(string[] args)
+        {
+            InitializeBoard();
+            while (!gameOver)
+            {
+                PrintBoard();
+                if (player1Turn)
+                {
+                    Console.WriteLine("Player 1's turn (X)");
+                    GetPlayerMove('X');
+                }
+                else
+                {
+                    Console.WriteLine("Player 2's turn (O)");
+                    GetPlayerMove('O');
+                }
+
+                if (CheckForWin())
+                {
+                    PrintBoard();
+                    if (player1Turn)
+                    {
+                        Console.WriteLine("Player 1 (X) wins!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Player 2 (O) wins!");
+                    }
+                    gameOver = true;
+                }
+                else if (CheckForDraw())
+                {
+                    PrintBoard();
+                    Console.WriteLine("It's a draw!");
+                    gameOver = true;
+                }
+                else
+                {
+                    player1Turn = !player1Turn;
+                }
+            }
+        }
+
+        static void InitializeBoard()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    board[i, j] = ' ';
+                }
+            }
+        }
+
+        static void PrintBoard()
+        {
+            Console.WriteLine("  0 1 2");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write(i + " ");
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(board[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void GetPlayerMove(char playerSymbol)
+        {
+            bool validMove = false;
+            while (!validMove)
+            {
+                Console.Write("Enter row (0-2): ");
+                int row = int.Parse(Console.ReadLine());
+                Console.Write("Enter column (0-2): ");
+                int col = int.Parse(Console.ReadLine());
+
+                if (IsValidMove(row, col))
+                {
+                    MakeMove(row, col, playerSymbol);
+                    validMove = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid move! Try again.");
+                }
+            }
+        }
+
+        static bool IsValidMove(int row, int col)
+        {
+            return row >= 0 && row < 3 && col >= 0 && col < 3 && board[row, col] == ' ';
+        }
+
+        static void MakeMove(int row, int col, char playerSymbol)
+        {
+            board[row, col] = playerSymbol;
+        }
+
+        static bool CheckForWin()
+        {
+            // Check rows, columns, and diagonals for a win
+            for (int i = 0; i < 3; i++)
+            {
+                if (board[i, 0] != ' ' && board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
+                {
+                    return true;
+                }
+                if (board[0, i] != ' ' && board[0, i] == board[1, i] && board[1, i] == board[2, i])
+                {
+                    return true;
+                }
+            }
+            if (board[0, 0] != ' ' && board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
+            {
+                return true;
+            }
+            if (board[0, 2] != ' ' && board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
+            {
+                return true;
+            }
+            return false;
+        }
+
+        static bool CheckForDraw()
+        {
+            // Check if all cells are filled
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (board[i, j] == ' ')
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    }
+}﻿
