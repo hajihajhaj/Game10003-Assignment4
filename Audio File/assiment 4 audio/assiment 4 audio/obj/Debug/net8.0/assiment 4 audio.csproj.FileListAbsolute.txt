@@ -1,0 +1,45 @@
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.exe
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.deps.json
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.runtimeconfig.json
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.pdb
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\Raylib-cs.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\linux-x64\native\libraylib.so
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\osx-arm64\native\libraylib.dylib
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\osx-x64\native\libraylib.dylib
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\win-x64\native\raylib.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\win-x86\native\raylib.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.AssemblyReference.cache
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.CopyComplete
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\refint\assiment 4 audio.dll
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.pdb
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.genruntimeconfig.cache
+C:\Users\Gabriel\source\repos\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\ref\assiment 4 audio.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.exe
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.deps.json
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.runtimeconfig.json
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\assiment 4 audio.pdb
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\Raylib-cs.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\linux-x64\native\libraylib.so
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\osx-arm64\native\libraylib.dylib
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\osx-x64\native\libraylib.dylib
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\win-x64\native\raylib.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\runtimes\win-x86\native\raylib.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.AssemblyReference.cache
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.csproj.CopyComplete
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\refint\assiment 4 audio.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.pdb
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\assiment 4 audio.genruntimeconfig.cache
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\obj\Debug\net8.0\ref\assiment 4 audio.dll
+C:\Users\Gabriel\Desktop\Audio File\assiment 4 audio\assiment 4 audio\bin\Debug\net8.0\MP3Sharp.dll

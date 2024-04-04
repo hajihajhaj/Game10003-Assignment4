@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Ekloe - Vault скачать музыку бесплатно на мобильные и pc">
+					<meta name="googlebot" content="noindex,nofollow">
+		<meta name="robots" content="noindex,nofollow">
+		  <meta property="og:site_name" content="MUZMi.NET">
+		<meta property="og:title" content="Ekloe - Vault скачать музыка">
+		<meta property="og:url" content="https://muzmi.net/1/ekloe-vault">
+		<meta property="og:image" content="https://i.ytimg.com/vi/Ze7uBYzTZo0/mqdefault.jpg">
+		<meta property="og:description" content="Ekloe - Vault скачать музыку бесплатно на мобильные и pc">
+		<meta property="og:type" content="Music.Album">	
+		<link rel="stylesheet" href="/stil/mediaelementplayer.css">	
+		
+	<script src="https://muzmi.net/stil/js/jquery.min.js"></script>
+	<link rel="canonical" href="https://muzmi.net/1/ekloe-vault ">
+	<link rel="shortcut icon" href="https://muzmi.net/favicon.ico">
+	<link rel="stylesheet" href="https://muzmi.net/stil/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="https://muzmi.net/stil/custom.min.css">
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	<title>Ekloe - Vault скачать музыка</title>
+
+</head>
+<body>
+
+
+	<div class="container">	
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+			<div class="container">
+				<a class="navbar-brand font-weight-bold text-danger ml-3" href="https://muzmi.net"><span class="log"><big><i class="fa fa-headphones" aria-hidden="true"></i> MUZMi.NET</big></span></a>
+				<div class="col-lg-6">
+					<form action="https://muzmi.net" method="get">
+						<div class="input-group m-3">
+							<input class="form-control rounded mr-1" type="text" name="s" placeholder="введите слово...">
+							<span class="input-group-btn mr-4">
+								<input class="form-control btn btn-danger" value="Поиск" type="submit" type="button" >
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+  <div class="container my-1">
+    <div class="card text-white bg-danger">
+      <div class="card-header">Ekloe - Vault</div>
+              <div class="bg-white p-3">
+          <img src="https://i.ytimg.com/vi/Ze7uBYzTZo0/mqdefault.jpg" alt="Ekloe - Vault" class="img-thumbnail w-100" />
+
+                    <div class="players mt-3" id="player2-container">
+            <audio id="player2" preload="none" controls class="w-100">
+              <source src="https://www.youtube.com/watch?v=Ze7uBYzTZo0">
+            </audio>
+          </div>
+
+        </div>
+        <div class="bg-white pb-3 text-center">
+                    <button id="loChange" class="btn btn-dark px-5 w-30 m-1 text-danger">Начать Скачивание</button>
+          <div id="loadVideo"></div>
+          <div id="loWait" class="dloader"><img src='/ajax-loader.gif'><br>Подождите, идет подготовка ссылок...</div>
+                      <div id="loDown"><a class="btn btn-dark px-5 w-30 m-1 text-danger" href="https://cdnfiles.cc/dl/Y09uckl1blkwRE8vV25ka2tFOFFtdz/ekloe-vault_(MUZMi.NET).mp3" rel="nofollow"><i class="fa fa-cloud-download" aria-hidden="true"></i> Скачать MP3 <i class="fa fa-cloud-download" aria-hidden="true"></i></a></div>
+                    <script>
+            $(document).ready(function() {
+              $("#loDown").css("display", "none");
+              $(document).ajaxStart(function() {
+                $("#loWait").css("display", "block");
+                $("#loDown").css("display", "none");
+              });
+              $(document).ajaxComplete(function() {
+                $("#loWait").css("display", "none");
+                $("#loDown").css("display", "block");
+              });
+              $(document).ajaxStart(function() {
+                $("#loChange").css("display", "none");
+                $("#loDown").css("display", "none");
+              });
+              $("button").click(function() {
+                $("#loadVideo").load("/getmusic.php?id=Y09uckl1blkwRE8vV25ka2tFOFFtdz&name=ekloe-vault&token=VFUvYW5sK1hrWVNLYnJvREdJcGh2UT");
+
+
+              });
+            });
+          </script>
+
+        </div>
+            <h2 class="card-header">Похожие Музыки</h2>
+      
+          <a class="list-group-item text-dark" href="https://muzmi.net/1/ekloe-vault" >
+          <span class="badge badge-dark rounded float-right mt-1">7:25</span> <i class="fa fa-volume-up fa-1x pr-2" aria-hidden="true"></i>Ekloe - Vault</a>
+          
+          <a class="list-group-item text-dark" href="https://muzmi.net/2/ekloe-vault" >
+          <span class="badge badge-dark rounded float-right mt-1">7:25</span> <i class="fa fa-volume-up fa-1x pr-2" aria-hidden="true"></i>Chillstep |  Ekloe  - Vault</a>
+          
+          <a class="list-group-item text-dark" href="https://muzmi.net/3/ekloe-vault" >
+          <span class="badge badge-dark rounded float-right mt-1">7:26</span> <i class="fa fa-volume-up fa-1x pr-2" aria-hidden="true"></i>Vault - Ekloe</a>
+          
+          <a class="list-group-item text-dark" href="https://muzmi.net/4/ekloe-vault" >
+          <span class="badge badge-dark rounded float-right mt-1">7:38</span> <i class="fa fa-volume-up fa-1x pr-2" aria-hidden="true"></i>Ekloe Vault</a>
+          
+          <a class="list-group-item text-dark" href="https://muzmi.net/5/ekloe-vault" >
+          <span class="badge badge-dark rounded float-right mt-1">3:15</span> <i class="fa fa-volume-up fa-1x pr-2" aria-hidden="true"></i>Ekloe - Thousands Miles (2021)</a>
+              </div>
+  </div>
+<div class="container my-1">
+	<div class="card text-white bg-danger">
+		<h2 class="card-header">Поисковые запросы</h2>
+		<div class="bg-light mb-0 text-center">
+			<a class="badge badge-dark" href="https://muzmi.net/?s=often+slowed+reverb">Often Slowed</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=seide+sultan+ahuzar+icinde+resmi+musiqi+videosu">Seide Sultan</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=bro+hold+on+let+me+talk">Bro Hold</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=chepikk">Chepikk</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=vnas+korum+em">Vnas Korum</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=alisham">Alisham</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=miyagi+mask+off">Miyagi Mask</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=voyage+and+nucci+gad">Voyage And</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=ватан+гуфтам+мр3">ватан гуфтам</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=fuego+speed+up">Fuego Speed</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=без+слов+santiz+минус">без слов</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=богдан+тихончик">богдан тихончик</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=team+33+than+you">Team 33</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=softcore+slowed+down">Softcore Slowed</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=stereo+love+tik+tok+slowed">Stereo Love</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=im+lezun">Im Lezun</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=yudzhin+tech+stress">Yudzhin Tech</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=стреляешь+па+па+пам">стреляешь па</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=baster+leo">Baster Leo</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=гурт+забава+продавала+самогон">гурт забава</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=remix+tetris">Remix Tetris</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=akcent+thats+my+name+slowed+reverb+скачать">Akcent Thats</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=yarim+edib+xeste+meni+eshqine+serser">Yarim Edib</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=мусора+б+п">мусора б</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=gtamapiano+gta+amapiano+от+jaydon+lewis">Gtamapiano Gta</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=wah+ejejan+ine+seyle+bolyar+soldatyn+guni+mp3">Wah Ejejan</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=benden+uzak+ol+gitar+burak">Benden Uzak</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=гимн+османской+имперй">гимн османской</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=первое+свидание+dj+ikonnikov">первое свидание</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=исправим">исправим</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=jahongir+otajonov+yolgonchi+yor+mp3">Jahongir Otajonov</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=midoria">Midoria</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=funk+estranho+super+slowed">Funk Estranho</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=dombra+remix">Dombra Remix</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=tek+lt">Tek Lt</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=люблю+тебе+кавер">люблю тебе</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=jay+lima+blaze">Jay Lima</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=kel+dardlarmz+bolshaylik+kel+yulduz+usmonova">Kel Dardlarmz</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=annus+myratdurdyyew+garasdym">Annus Myratdurdyyew</a>
+<a class="badge badge-dark" href="https://muzmi.net/?s=my+eyes">My Eyes</a>		</div>
+	</div>
+</div>
+<div class="container">
+
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-dark indigo text-white">
+
+    <!-- Footer Links -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a class="text-danger card-link" href="">Скачать Музыку</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a class="text-danger card-link" href="">Хит-Парад</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a class="text-danger card-link" href="">Слушать Онлайн</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a class="text-danger card-link" href="">Русский Чарт</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+      <hr class="table-light" style="margin: 0 15%;">
+
+      <!-- Grid row-->
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+        <!-- Grid column -->
+        <div class="col-md-8 col-12 mt-4">
+          <p style="line-height: 1.7rem">Вся музыка mp3 на сайте предназначена для рекламных целей. Загрузите и прослушайте mp3 и удалите его с вашего устройства и купите mp3-альбомы. В противном случае мы не несем ответственности. Для предложений, запросов, жалоб и уведомлений об авторских правах, пожалуйста, свяжитесь с нами по адресу mino@muzmino.com</p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+      <!-- Grid row-->
+      <div class="row pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-12">
+
+          <div class="mb-2 text-center">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fa fa-vk fa-lg white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fa fa-twitter fa-lg white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fa fa-google-plus fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fa fa-facebook fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fa fa-instagram fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fa fa-pinterest fa-lg white-text"> </i>
+            </a>
+
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2024 Copyright:
+      <a class="text-danger card-link" href="https://muzmi.net"> MUZMi.NET</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</div>
+<script type="text/javascript">
+    (function () {
+        var sc = document.createElement("script");
+        var stime = 0;
+        try {stime=new Event("").timeStamp.toFixed(2);}catch(e){}
+        sc.type = "text/javascript";
+        sc.setAttribute("data-mrmn-tag", "iam");
+        sc.setAttribute("async", "async");
+        sc.src = "https://mn230126pb.com/wcm/?"
+            + "sh=" + document.location.host.replace(/^www\./, "")
+            + "&sth=30735d42be22c7b3a1159b7827c0a2be"
+            + "&m=c2a1deee072e0445c28243da0a11a16e"
+            + "&sid=" + parseInt(Math.random() * 1e3) + "_" + parseInt(Math.random() * 1e6) + "_" + parseInt(Math.random() * 1e9)
+            + "&stime=" + stime
+            + "&curpage=" + encodeURIComponent(document.location)
+            + "&rand=" + Math.random();
+        if (document.head) {
+            document.head.appendChild(sc);
+        } else {
+            var node = document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(sc, node);
+        }
+    })();
+</script>
+
+<script type="text/javascript" src="https://cs112.smachnakittchen.com/cscript/112/booennsn44x85n88.js"> </script>
+<script src="/stil/js/mediaelement-and-players.js"></script>
+<script>
+  $('audio').mediaelementplayer();
+</script>
+<script src="https://muzmi.net/stil/js/popper.min.js"></script>
+<script src="https://muzmi.net/stil/js/bootstrap.min.js"></script>
+<script src="https://muzmi.net/stil/js/custom.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter50703010 = new Ya.Metrika2({
+          id: 50703010,
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true
+        });
+      } catch (e) {}
+    });
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function() {
+        n.parentNode.insertBefore(s, n);
+      };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/tag.js";
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+      f();
+    }
+  })(document, window, "yandex_metrika_callbacks2");
+</script> <noscript>
+  <div><img src="https://mc.yandex.ru/watch/50703010" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript> <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
