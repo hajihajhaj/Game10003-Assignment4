@@ -17,25 +17,29 @@ class Program
 
         string saveDirectory = "C:/Users/hajar/downloads/tictactoe";
 
-        // Download images from urls 
+        // download images from urls 
         string waffleImagePath = DownloadImage("https://i.postimg.cc/x878S3yX/waffle.png", saveDirectory);
         string strawberryImagePath = DownloadImage("https://i.postimg.cc/PJBX7rTZ/strawberry.png", saveDirectory);
         string blueberryImagePath = DownloadImage("https://i.postimg.cc/ncDcD7G1/blueberry.png", saveDirectory);
 
+
+        // Load textures for the game
         Texture2D waffleTexture = Raylib.LoadTexture(waffleImagePath);
         Texture2D strawberryTexture = Raylib.LoadTexture(strawberryImagePath);
         Texture2D blueberryTexture = Raylib.LoadTexture(blueberryImagePath);
 
+        // Set board size
         const int boardSize = 3;
         char[,] board = new char[boardSize, boardSize];
         bool playerTurn = true;
         bool gameOver = false;
 
-        for (int row = 0; row < boardSize; row++)
+        // Initialize the game board
+        for (int i = 0; i < boardSize; i++)
         {
-            for (int column = 0; column < boardSize; column++)
+            for (int j = 0; j < boardSize; j++)
             {
-                board[row, column] = ' ';
+                board[i, j] = ' ';
             }
         }
 
@@ -98,12 +102,13 @@ class Program
                 if (aiMove != null)
                 {
                     int row = aiMove[0];
-                    int column = aiMove[1];
-                    board[row, column] = 'O';
+                    int col = aiMove[1];
+                    board[row, col] = 'O'; // Place blueberry at AI's move
                     playerTurn = true;
                 }
             }
 
+            // Draw the game
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.RayWhite);
 
@@ -111,29 +116,33 @@ class Program
             Raylib.DrawTextureEx(waffleTexture, new Vector2(-135, -5), 0.0f, 0.45f, Color.White);
 
             // Draw the strawberries and blueberries on the board
-            for (int row = 0; row < boardSize; row++)
+            for (int i = 0; i < boardSize; i++)
             {
-                for (int column = 0; column < boardSize; column++)
+                for (int j = 0; j < boardSize; j++)
                 {
-                    float cellX = column * (screenWidth / boardSize) + -30;
-                    float cellY = row * (screenHeight / boardSize) + -30;
+                    float cellX = j * (screenWidth / boardSize) + -30; // Adjusted X position
+                    float cellY = i * (screenHeight / boardSize) + -30; // Adjusted Y position
 
-                    if (board[row, column] == 'X')
+                    if (board[i, j] == 'X')
                     {
-                        Raylib.DrawTextureEx(strawberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White);
+                        Raylib.DrawTextureEx(strawberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White); // Reduced character size
                     }
-                    else if (board[row, column] == 'O')
+                    else if (board[i, j] == 'O')
                     {
-                        Raylib.DrawTextureEx(blueberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White);
+                        Raylib.DrawTextureEx(blueberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White); // Reduced character size
                     }
                 }
             }
 
-            // Check if game is over
+            // Check for game over conditions
             if (!gameOver)
             {
                 char winner = CheckWinner(board);
                 if (winner != ' ')
+                {
+                    gameOver = true;
+                }
+                else if (IsBoardFull(board))
                 {
                     gameOver = true;
                 }
@@ -142,6 +151,8 @@ class Program
             Raylib.EndDrawing();
         }
 
+
+        // Unload textures and close Raylib window
         Raylib.UnloadTexture(waffleTexture);
         Raylib.UnloadTexture(strawberryTexture);
         Raylib.UnloadTexture(blueberryTexture);
@@ -149,11 +160,12 @@ class Program
         Raylib.CloseWindow();
     }
 
-    static void PlaceStrawberry(char[,] board, int row, int column)
+    static void PlaceStrawberry(char[,] board, int row, int col)
     {
-        if (board[row, column] == ' ')
+        // Place a strawberry on the board if the cell is empty
+        if (board[row, col] == ' ')
         {
-            board[row, column] = 'X';
+            board[row, col] = 'X';
         }
     }
 
@@ -161,14 +173,14 @@ class Program
     {
         Random rand = new Random();
 
-        // Check if game is over
-        for (int row = 0; row < board.GetLength(0); row++)
+        // Check for available moves and return a random move
+        for (int i = 0; i < board.GetLength(0); i++)
         {
-            for (int column = 0; column < board.GetLength(1); column++)
+            for (int j = 0; j < board.GetLength(1); j++)
             {
-                if (board[row, column] == ' ')
+                if (board[i, j] == ' ')
                 {
-                    return new int[] { row, column };
+                    return new int[] { i, j };
                 }
             }
         }
@@ -176,25 +188,27 @@ class Program
         return null;
     }
 
-    // Check if anyone won
     static char CheckWinner(char[,] board)
     {
-        for (int row = 0; row < board.GetLength(0); row++)
+        // Check rows
+        for (int i = 0; i < board.GetLength(0); i++)
         {
-            if (board[row, 0] != ' ' && board[row, 0] == board[row, 1] && board[row, 1] == board[row, 2])
+            if (board[i, 0] != ' ' && board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
             {
-                return board[row, 0];
+                return board[i, 0];
             }
         }
 
-        for (int column = 0; column < board.GetLength(1); column++)
+        // Check columns
+        for (int j = 0; j < board.GetLength(1); j++)
         {
-            if (board[0, column] != ' ' && board[0, column] == board[1, column] && board[1, column] == board[2, column])
+            if (board[0, j] != ' ' && board[0, j] == board[1, j] && board[1, j] == board[2, j])
             {
-                return board[0, column];
+                return board[0, j];
             }
         }
 
+        // Check diagonals
         if (board[0, 0] != ' ' && board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
         {
             return board[0, 0];
@@ -205,8 +219,10 @@ class Program
             return board[0, 2];
         }
 
+        // No winner
         return ' ';
     }
+
 
     static string DownloadImage(string url, string saveDirectory)
     {
@@ -214,5 +230,17 @@ class Program
         string imagePath = Path.Combine(saveDirectory, fileName);
 
         return imagePath;
+    }
+    static bool IsBoardFull(char[,] board)
+    {
+        // Check if the board is full (no empty cells)
+        foreach (char cell in board)
+        {
+            if (cell == ' ')
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
