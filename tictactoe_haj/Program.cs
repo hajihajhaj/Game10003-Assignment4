@@ -91,54 +91,86 @@ class Program
                 }
             }
 
-            Raylib.BeginDrawing();
-            Raylib.ClearBackground(Color.RayWhite);
-
-            // Draw the game board
-            Raylib.DrawTextureEx(waffleTexture, new Vector2(-135, -5), 0.0f, 0.45f, Color.White);
-
-            // Draw the strawberries and blueberries on the board
-            for (int row = 0; row < boardSize; row++)
+            // AI's turn
+            else if (!playerTurn && !gameOver)
             {
-                for (int column = 0; column < boardSize; column++)
+                int[] aiMove = GetAIMove(board);
+                if (aiMove != null)
                 {
-                    float cellX = column * (screenWidth / boardSize) + -30; 
-                    float cellY = row * (screenHeight / boardSize) + -30; 
-                    if (board[row, column] == 'X')
+                    int row = aiMove[0];
+                    int column = aiMove[1];
+                    board[row, column] = 'O';
+                    playerTurn = true;
+                }
+
+                Raylib.BeginDrawing();
+                Raylib.ClearBackground(Color.RayWhite);
+
+                // Draw the game board
+                Raylib.DrawTextureEx(waffleTexture, new Vector2(-135, -5), 0.0f, 0.45f, Color.White);
+
+                // Draw the strawberries and blueberries on the board
+                for (int row = 0; row < boardSize; row++)
+                {
+                    for (int column = 0; column < boardSize; column++)
                     {
-                        Raylib.DrawTextureEx(strawberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White); 
+                        float cellX = column * (screenWidth / boardSize) + -30;
+                        float cellY = row * (screenHeight / boardSize) + -30;
+                        if (board[row, column] == 'X')
+                        {
+                            Raylib.DrawTextureEx(strawberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White);
+                        }
+                        else if (board[row, column] == 'O')
+                        {
+                            Raylib.DrawTextureEx(blueberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White);
+                        }
                     }
-                    else if (board[row, column] == 'O')
+                }
+
+                Raylib.EndDrawing();
+            }
+
+            Raylib.UnloadTexture(waffleTexture);
+            Raylib.UnloadTexture(strawberryTexture);
+            Raylib.UnloadTexture(blueberryTexture);
+
+            Raylib.CloseWindow();
+        }
+
+        static void PlaceStrawberry(char[,] board, int row, int column)
+        {
+            if (board[row, column] == ' ')
+            {
+                board[row, column] = 'X';
+            }
+        }
+
+        static int[] GetAIMove(char[,] board)
+        {
+            Random rand = new Random();
+
+            // Random AI moves
+            for (int row = 0; row < board.GetLength(0); row++)
+            {
+                for (int column = 0; column < board.GetLength(1); column++)
+                {
+                    if (board[row, column] == ' ')
                     {
-                        Raylib.DrawTextureEx(blueberryTexture, new Vector2(cellX, cellY), 0f, 0.15f, Color.White);
+                        return new int[] { row, column };
                     }
                 }
             }
 
-            Raylib.EndDrawing();
+            return null;
         }
 
-        Raylib.UnloadTexture(waffleTexture);
-        Raylib.UnloadTexture(strawberryTexture);
-        Raylib.UnloadTexture(blueberryTexture);
-
-        Raylib.CloseWindow();
-    }
-
-    static void PlaceStrawberry(char[,] board, int row, int column)
-    {
-        if (board[row, column] == ' ')
+        static string DownloadImage(string url, string saveDirectory)
         {
-            board[row, column] = 'X';
+            string fileName = Path.GetFileName(new Uri(url).AbsolutePath);
+            string imagePath = Path.Combine(saveDirectory, fileName);
+
+            return imagePath;
         }
-    }
-
-    static string DownloadImage(string url, string saveDirectory)
-    {
-        string fileName = Path.GetFileName(new Uri(url).AbsolutePath);
-        string imagePath = Path.Combine(saveDirectory, fileName);
-
-        return imagePath;
     }
 }
 
