@@ -1,10 +1,10 @@
-﻿using GameAudio;
-using Raylib_cs;
+﻿using Raylib_cs;
 using System;
 using System.ComponentModel.Design;
 using System.Drawing;
 using System.Numerics;
 using Color = Raylib_cs.Color;
+using final_tictactoe;
 
 class Program
 {
@@ -137,6 +137,7 @@ class Program
                 if (winner != ' ')
                 {
                     gameOver = true;
+                    Karn.ShowEndScreen($"{winner} wins!");
                 }
             }
 
